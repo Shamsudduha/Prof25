@@ -37,7 +37,15 @@ function updateCountdown() {
 
     // Updated text
     document.getElementById("status-text").innerHTML = `<strong>Next Exam: ${exam.name}</strong>`;
-   document.getElementById("next-exam").innerText = `Date & Time: ${start.toLocaleString('en-US', { hour12: true })}`;
+    document.getElementById("next-exam").innerText = `Date & Time: ${start.toLocaleString('en-US', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true
+})}`;
+
 
 
   } else if (now >= start && now <= end) {
@@ -57,4 +65,3 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
-
