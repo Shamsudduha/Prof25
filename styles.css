@@ -63,15 +63,17 @@ h1.title {
 
 /* Next Exam Date & Time */
 #next-exam {
-    font-size: 1rem;
-    color: #B22222;                 /* red text */
-    background-color: #ffffff;       /* white background */
-    padding: 5px 10px;               /* small padding */
-    border-radius: 8px;              /* rounded corners */
+    display: inline-block;      /* always show when JS says so */
+    font-size: 1rem;            /* readable on small screens */
+    color: #B22222;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 8px;
     font-weight: 700;
-    margin: 5px 0 15px 0;
-    display: inline-block;           /* shrink to content width */
+    text-align: center;
+    margin: 5px auto 15px auto; /* centered on mobile */
 }
+
 
 
 /* Quote */
@@ -102,3 +104,4 @@ footer {
         width: 80px;
     }
 }
+
