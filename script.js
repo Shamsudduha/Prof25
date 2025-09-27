@@ -14,7 +14,8 @@ function updateCountdown() {
     // After last exam → show viva message
     document.getElementById("status-text").innerText = "Wait for Viva Routine...";
     document.getElementById("timer").style.display = "none";
-    document.getElementById("next-exam").style.display = "none";
+    document.getElementById("next-exam").style.display = "block";
+
     return;
   }
 
@@ -65,3 +66,4 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
