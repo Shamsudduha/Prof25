@@ -1,0 +1,99 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8B0000, #B22222, #DC143C); /* Rosy red gradient */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+header .logo {
+    width: 80px;
+    margin-top: 15px;
+}
+
+/* Main Heading */
+h1.title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+/* Countdown Timer */
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 10px;
+    border-radius: 12px;
+    min-width: 60px;
+}
+
+.label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #eee;
+    margin-top: 5px;
+}
+
+/* Status Text (Next Exam / Ongoing) */
+#status-text {
+    font-size: 1.2rem;   /* slightly larger */
+    font-weight: 900;    /* bold */
+    margin-top: 5px;
+    color: #fff;
+}
+
+/* Next Exam Date & Time */
+#next-exam {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0px 0 15px 0;  /* top margin smaller to move slightly above */
+    font-weight: 500;       /* semi-bold for readability */
+}
+
+/* Quote */
+.quote {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+}
+
+/* Mobile-first Responsive */
+@media (min-width: 768px) {
+    h1.title {
+        font-size: 2.5rem;
+    }
+    #timer {
+        font-size: 2rem;
+    }
+    header .logo {
+        width: 80px;
+    }
+}
