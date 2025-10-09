@@ -1,20 +1,22 @@
-// Exam routine
+// ====== Exam Routine ======
 const exams = [
-  { name: "Forensic Medicine & Toxicology", start: "2025-11-18T10:00:00", end: "2025-11-18T13:00:00" },
-  { name: "Pharmacology", start: "2025-11-24T10:00:00", end: "2025-11-24T13:00:00" },
-  { name: "OSPE Examination", start: "2025-11-29T10:00:00", end: "2025-11-29T13:00:00" }
+  { name: "Forensic Medicine (Written)", start: "2025-11-20T10:00:00", end: "2025-11-20T13:00:00" },
+  { name: "Pharmacology (Written)", start: "2025-11-25T10:00:00", end: "2025-11-25T13:00:00" },
+  { name: "Central OSPE - Forensic Medicine", start: "2025-11-29T09:00:00", end: "2025-11-29T12:00:00" },
+  { name: "Central OSPE - Pharmacology", start: "2025-12-02T09:00:00", end: "2025-12-02T12:00:00" }
 ];
 
 let currentExamIndex = 0;
 
+// ====== Countdown Function ======
 function updateCountdown() {
   const now = new Date();
 
   if (currentExamIndex >= exams.length) {
-    // After last exam → show viva message
-    document.getElementById("status-text").innerText = "Wait for Viva Routine...";
+    // After all exams → Viva message
+    document.getElementById("status-text").innerText = "🎓 All exams completed! Viva starts on 06 December 2025.";
     document.getElementById("timer").style.display = "none";
-document.getElementById("next-exam").style.display = "none";
+    document.getElementById("next-exam").style.display = "none";
     return;
   }
 
@@ -35,22 +37,18 @@ document.getElementById("next-exam").style.display = "none";
     document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
     document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
 
-    // Updated text
     document.getElementById("status-text").innerHTML = `<strong>Next Exam: ${exam.name}</strong>`;
-    document.getElementById("next-exam").innerText = `Date & Time: ${start.toLocaleString('en-US', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true
-})}`;
-
-
+    document.getElementById("next-exam").innerText = `📅 ${start.toLocaleDateString('en-GB', {
+      weekday: 'long', day: '2-digit', month: 'short', year: 'numeric'
+    })} | 🕙 ${start.toLocaleTimeString('en-US', {
+      hour: '2-digit', minute: '2-digit', hour12: true
+    })} - ${end.toLocaleTimeString('en-US', {
+      hour: '2-digit', minute: '2-digit', hour12: true
+    })}`;
 
   } else if (now >= start && now <= end) {
     // During exam
-    document.getElementById("status-text").innerText = `${exam.name} Exam is Ongoing...`;
+    document.getElementById("status-text").innerText = `${exam.name} is ongoing...`;
     document.getElementById("timer").style.display = "none";
     document.getElementById("next-exam").style.display = "none";
 
@@ -65,5 +63,3 @@ document.getElementById("next-exam").style.display = "none";
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
-
-
