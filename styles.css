@@ -79,6 +79,7 @@ h1.title {
 /* Quote */
 .quote {
     margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 0.85rem;
     font-style: italic;
     opacity: 0.9;
@@ -104,5 +105,6 @@ footer {
         width: 80px;
     }
 }
+
 
 
