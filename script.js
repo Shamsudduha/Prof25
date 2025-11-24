@@ -1,9 +1,20 @@
 // ====== Exam Routine ======
 const exams = [
-  { name: "Forensic Medicine (Written)", start: "2025-11-20T10:00:00", end: "2025-11-20T13:00:00" },
-  { name: "Pharmacology (Written)", start: "2025-11-25T10:00:00", end: "2025-11-25T13:00:00" },
-  { name: "Central OSPE - Forensic Medicine", start: "2025-11-29T09:00:00", end: "2025-11-29T12:00:00" },
-  { name: "Central OSPE - Pharmacology", start: "2025-12-02T09:00:00", end: "2025-12-02T12:00:00" }
+  { 
+    name: "Pharmacology (Written)", 
+    start: "2025-12-03T10:00:00", 
+    end: "2025-12-03T13:00:00" 
+  },
+  { 
+    name: "Forensic Medicine (Central OSPE)", 
+    start: "2025-12-09T10:00:00", 
+    end: "2025-12-09T13:00:00" 
+  },
+  { 
+    name: "Pharmacology (Central OSPE)", 
+    start: "2025-12-11T10:00:00", 
+    end: "2025-12-11T13:00:00" 
+  }
 ];
 
 let currentExamIndex = 0;
@@ -14,7 +25,7 @@ function updateCountdown() {
 
   if (currentExamIndex >= exams.length) {
     // After all exams → Viva message
-    document.getElementById("status-text").innerText = "🎓 All exams completed! Viva starts on 06 December 2025.";
+    document.getElementById("status-text").innerText = "🎓 All exams completed! Viva starts on 17 December 2025.";
     document.getElementById("timer").style.display = "none";
     document.getElementById("next-exam").style.display = "none";
     return;
