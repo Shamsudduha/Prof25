@@ -12,8 +12,8 @@ const exams = [
   },
   { 
     name: "Pharmacology (Central OSPE)", 
-    start: "2025-12-11T10:00:00", 
-    end: "2025-12-11T13:00:00" 
+    start: "2025-12-13T10:00:00", 
+    end: "2025-12-13T13:00:00" 
   }
 ];
 
