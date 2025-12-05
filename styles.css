@@ -1,155 +1,48 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-/* Body & Layout */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #8B0000, #B22222, #DC143C);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    padding: 20px;
-    justify-content: flex-start; /* start from top */
-    align-items: center;
-}
-
-/* Logo */
-header .logo {
-    width: 80px;
-    margin-top: 0px;
-}
-
-/* Main Heading */
-h1.title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 20px 0;
-}
-
-/* Countdown Timer */
-#timer {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.time-box {
-    background: rgba(0,0,0,0.3); /* darker for visibility */
-    padding: 12px 10px;
-    border-radius: 12px;
-    min-width: 60px;
-    color: #fff;
-    font-weight: bold;
-}
-
-.label {
-    font-size: 0.7rem;
-    font-weight: 400;
-    color: #eee;
-    margin-top: 5px;
-}
-
-/* Status Text (Next Exam / Ongoing) */
-#status-text {
-    font-size: 1.2rem;
-    font-weight: 900;
-    margin-top: 5px;
-    color: #fff;
-}
-
-/* Next Exam Date & Time */
-#next-exam {
-    display: inline-block;
-    font-size: 1rem;
-    color: #B22222;
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-align: center;
-    margin: 5px auto 15px auto;
-}
-
-/* Quote */
-.quote {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 0.85rem;
-    font-style: italic;
-    opacity: 0.9;
-}
-
-/* Footer fix */
-footer {
-    margin-top: auto; /* push footer to bottom */
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.8);
-}
-
-/* Roll Buttons */
-#roll-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 20px;
-}
-
-#roll-buttons button {
-    padding: 8px 12px;
-    border-radius: 10px;
+/* Exam Routine Button */
+#exam-btn {
+    padding: 12px 25px;
+    border-radius: 25px;
     border: none;
-    background-color: rgba(255,255,255,0.2);
+    background: linear-gradient(45deg, #FF6347, #FF4500);
     color: #fff;
     cursor: pointer;
     font-weight: 600;
-}
-#roll-buttons button:hover {
-    background-color: rgba(255,255,255,0.4);
-}
-
-/* Viva Dropdown */
-#viva-dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    max-width: 320px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Viva Box */
-.viva-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(0,0,0,0.3);
-    padding: 15px;
-    border-radius: 12px;
-    width: 100%;
+#exam-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
-/* Viva Subject & Date */
-.viva-subject, .viva-date {
-    font-weight: 600;
-    margin: 5px 0;
-}
-
-/* Viva Countdown Horizontal */
-.viva-countdown {
+/* Exam Routine Image */
+#exam-dropdown {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
+}
+
+.routine-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Viva Countdown Centering Fix */
+.viva-countdown {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically inside box */
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
+/* Viva Countdown Boxes */
 .viva-countdown .time-box {
     min-width: 50px;
     background: rgba(0,0,0,0.3);
@@ -157,13 +50,13 @@ footer {
     border-radius: 10px;
     font-weight: bold;
     color: #fff;
+    text-align: center;
 }
 
 /* Countdown numbers */
 .viva-countdown .time-box span {
     display: block;
     font-size: 1.2rem;
-    text-shadow: none;
 }
 
 /* Countdown labels */
@@ -176,33 +69,31 @@ footer {
 /* Responsive for mobile */
 @media (max-width: 480px) {
     .viva-countdown {
-        gap: 5px;
-    }
-    .viva-countdown .time-box {
-        padding: 8px 6px;
-        min-width: 45px;
-    }
-    .viva-countdown .time-box span {
-        font-size: 1rem;
-    }
-    #roll-buttons {
-        gap: 3px;
-    }
-}
-
-@media (max-width: 480px) {
-    .viva-countdown {
-        justify-content: center; /* center items */
-        flex-wrap: wrap;          /* allow countdown boxes to wrap */
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 5px;
         width: 100%;
     }
+
     .viva-countdown .time-box {
         padding: 8px 6px;
         min-width: 45px;
-        flex: 1 1 auto; /* allow boxes to shrink and fit screen */
-        max-width: 70px; /* optional: prevent them from getting too wide */
-        text-align: center; /* center numbers inside */
+        flex: 1 1 auto;
+        max-width: 70px;
+        text-align: center;
+    }
+
+    #roll-buttons { gap: 3px; }
+
+    /* Exam Routine Image Responsive */
+    .routine-img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    #exam-btn {
+        width: 90%;
+        padding: 12px;
+        font-size: 0.95rem;
     }
 }
-
