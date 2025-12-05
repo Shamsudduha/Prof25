@@ -1,99 +1,228 @@
-/* Exam Routine Button */
-#exam-btn {
-    padding: 12px 25px;
-    border-radius: 25px;
-    border: none;
-    background: linear-gradient(45deg, #FF6347, #FF4500);
+/* ================= Google Fonts ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ================= General Styles ================= */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #FF3B3F; /* red background */
     color: #fff;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-#exam-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
 }
 
-/* Exam Routine Image */
-#exam-dropdown {
+/* ================= Header ================= */
+header {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+}
+
+/* ================= Title ================= */
+h1.title {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ================= Quote ================= */
+p.quote {
+    font-style: italic;
+    color: #ffe6e6;
+    margin: 25px 0;
+    font-size: 1rem;
+}
+
+/* ================= Countdown Timer ================= */
+#timer, .viva-countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.time-box {
+    min-width: 60px;
+    background: rgba(255,255,255,0.2);
+    padding: 15px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+}
+
+.time-box:hover {
+    transform: scale(1.05);
+}
+
+.time-box span {
+    display: block;
+    font-size: 1.3rem;
+}
+
+.label {
+    font-size: 0.75rem;
+    color: #ffe6e6;
+    margin-top: 4px;
+}
+
+/* ================= Exam Routine Button ================= */
+#exam-btn {
+    padding: 16px 32px;
+    border-radius: 30px;
+    border: none;
+    background: #fff;   /* white button */
+    color: #FF3B3F;     /* red text */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 15px auto;
+    display: block;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#exam-btn:hover,
+#exam-btn:active {
+    background: #ffe6e6;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ================= Exam Dropdown ================= */
+#exam-dropdown {
+    display: none;
+    justify-content: center;
+    margin: 15px 0;
 }
 
 .routine-img {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
-/* Viva Countdown Centering Fix */
+/* ================= Roll Buttons ================= */
+#roll-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+#roll-buttons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+    color: #FF3B3F;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+#roll-buttons button:hover,
+#roll-buttons button:active {
+    background: #ffe6e6;
+    transform: translateY(-2px);
+}
+
+/* ================= Footer ================= */
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.85rem;
+    color: #ffe6e6;
+    margin-top: 25px;
+}
+
+/* ================= Viva Countdown ================= */
 .viva-countdown {
     display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically inside box */
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     flex-wrap: wrap;
     margin-top: 10px;
 }
 
-/* Viva Countdown Boxes */
-.viva-countdown .time-box {
-    min-width: 50px;
-    background: rgba(0,0,0,0.3);
-    padding: 12px 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-}
-
-/* Countdown numbers */
-.viva-countdown .time-box span {
-    display: block;
-    font-size: 1.2rem;
-}
-
-/* Countdown labels */
-.viva-countdown .label {
-    font-size: 0.7rem;
-    color: #eee;
-    margin-top: 3px;
-}
-
-/* Responsive for mobile */
-@media (max-width: 480px) {
-    .viva-countdown {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
-        width: 100%;
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    h1.title {
+        font-size: 1.8rem;
     }
 
-    .viva-countdown .time-box {
-        padding: 8px 6px;
-        min-width: 45px;
-        flex: 1 1 auto;
-        max-width: 70px;
-        text-align: center;
-    }
-
-    #roll-buttons { gap: 3px; }
-
-    /* Exam Routine Image Responsive */
-    .routine-img {
-        max-width: 90%;
-        height: auto;
+    .time-box {
+        min-width: 50px;
+        padding: 12px 10px;
+        font-size: 1.1rem;
     }
 
     #exam-btn {
         width: 90%;
-        padding: 12px;
+        font-size: 1rem;
+        padding: 14px 0;
+    }
+
+    #roll-buttons button {
+        flex: 1 1 45%;
         font-size: 0.95rem;
+        padding: 10px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.title {
+        font-size: 1.5rem;
+    }
+
+    .time-box {
+        min-width: 45px;
+        padding: 10px 8px;
+        font-size: 1rem;
+    }
+
+    #exam-btn {
+        width: 95%;
+        font-size: 0.95rem;
+        padding: 12px 0;
+    }
+
+    #roll-buttons button {
+        flex: 1 1 40%;
+        font-size: 0.9rem;
+        padding: 10px 6px;
+    }
+
+    .routine-img {
+        max-width: 90%;
+        border-radius: 12px;
     }
 }
