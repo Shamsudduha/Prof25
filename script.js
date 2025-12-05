@@ -124,5 +124,15 @@ function showVivaForRange(range) {
     }, 1000);
   });
 
+  // Exam Routine Button Toggle
+const examBtn = document.getElementById('exam-btn');
+const examDropdown = document.getElementById('exam-dropdown');
+
+examBtn.addEventListener('click', () => {
+  examDropdown.style.display = examDropdown.style.display === 'flex' ? 'none' : 'flex';
+});
+
+
   vivaDropdown.style.display = 'flex';
 }
+
