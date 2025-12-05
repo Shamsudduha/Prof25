@@ -1,229 +1,116 @@
-/* ================= Google Fonts ================= */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ================= General Styles ================= */
-* {
-    box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 html, body {
-    height: 100%;
-    margin: 0;
-    font-family: 'Poppins';
-    background: #ff0000 ; /* red background */
-    color: #fff;
+    margin:0; padding:0; height:100%;
+    font-family:'Poppins', sans-serif;
+    background:#7c0a02; /* deep red background */
+    color:#ffffff; /* white text */
+    display:flex; flex-direction:column; align-items:center; text-align:center; padding:10px;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 15px;
-}
+header { margin: 10px 0; }
+.logo { max-width:120px; width:25vw; height:auto; }
 
-/* ================= Header ================= */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
+h1.title { font-size:2rem; margin:10px 0 20px; font-weight:700; color:#ffffff; }
 
-.logo {
-    max-width: 120px;
-    height: auto;
-}
+p.quote { font-style:italic; color:#ffe6e6; margin:20px 0; }
 
-/* ================= Title ================= */
-h1.title {
-    font-size: 2rem;
-    margin: 10px 0 20px;
-    font-weight: 700;
-    color: #fff;
-}
-
-/* ================= Quote ================= */
-p.quote {
-    font-style: italic;
-    color: #ffe6e6;
-    margin: 25px 0;
-    font-size: 1rem;
+/* ================= Next Exam Box ================= */
+.next-exam-box {
+    background:#ffffff;
+    color:#7c0a02; /* deep red text inside white box */
+    padding:15px 10px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    max-width:95%;
+    margin-bottom:20px;
 }
 
 /* ================= Countdown Timer ================= */
-#timer, .viva-countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin: 15px 0;
-}
+.countdown-container { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
 
 .time-box {
-    min-width: 60px;
-    background: rgba(255,255,255,0.2);
-    padding: 15px 12px;
-    border-radius: 12px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease;
+    min-width:55px;
+    background:#ffffff; /* white box */
+    color:#7c0a02; /* deep red text inside */
+    padding:12px 10px;
+    border-radius:12px;
+    font-weight:600;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    display:flex; flex-direction:column; align-items:center;
 }
 
-.time-box:hover {
-    transform: scale(1.05);
-}
-
-.time-box span {
-    display: block;
-    font-size: 1.3rem;
-}
-
-.label {
-    font-size: 0.75rem;
-    color: #ffe6e6;
-    margin-top: 4px;
-}
+.time-box span { font-size:1.3rem; }
+.label { font-size:0.75rem; color:#7c0a02; margin-top:3px; }
 
 /* ================= Exam Routine Button ================= */
 #exam-btn {
-    padding: 16px 32px;
-    border-radius: 30px;
-    border: none;
-    background: #fff;   /* white button */
-    color: #FF3B3F;     /* red text */
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1.15rem;
-    margin: 15px auto;
-    display: block;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    padding:16px 30px;
+    border-radius:30px;
+    border:none;
+    background:#ffffff;
+    color:#7c0a02; /* deep red text */
+    font-weight:600;
+    font-size:1.1rem;
+    margin-bottom:10px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:all 0.3s ease;
 }
 
-#exam-btn:hover,
-#exam-btn:active {
-    background: #ffe6e6;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
+#exam-btn:hover { background:#ffe6e6; transform:translateY(-2px); }
 
-/* ================= Exam Dropdown ================= */
-#exam-dropdown {
-    display: none;
-    justify-content: center;
-    margin: 15px 0;
-}
-
-.routine-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+#exam-dropdown { display:none; flex-direction:column; gap:10px; margin-bottom:20px; max-width:95%; }
+.exam-box-text {
+    background:#ffffff; 
+    color:#7c0a02; /* deep red text */
+    padding:10px; 
+    border-radius:12px; 
+    font-weight:500; 
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* ================= Roll Buttons ================= */
-#roll-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 15px 0;
-}
-
+#roll-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-bottom:10px; }
 #roll-buttons button {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 25px;
-    background: #fff;
-    color: #FF3B3F;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    padding:12px 18px;
+    border:none;
+    border-radius:25px;
+    background:#ffffff;
+    color:#7c0a02; /* deep red text */
+    font-weight:500;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,0.25);
+    transition:all 0.3s ease;
 }
+#roll-buttons button:hover { background:#ffe6e6; transform:translateY(-2px); }
 
-#roll-buttons button:hover,
-#roll-buttons button:active {
-    background: #ffe6e6;
-    transform: translateY(-2px);
+/* ================= Viva Dropdown ================= */
+#viva-dropdown { display:flex; flex-direction:column; gap:15px; margin-bottom:20px; }
+.viva-box {
+    background:#ffffff;
+    color:#7c0a02; /* deep red text */
+    border-radius:15px;
+    padding:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.25);
 }
+.viva-subject { font-weight:600; margin-bottom:5px; }
+.viva-date { font-size:0.9rem; margin-bottom:8px; color:#7c0a02; }
+.viva-countdown { display:flex; justify-content:center; gap:8px; flex-wrap:nowrap; }
 
-/* ================= Footer ================= */
-footer {
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.85rem;
-    color: #ffe6e6;
-    margin-top: 25px;
-}
-
-/* ================= Viva Countdown ================= */
-.viva-countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
+/* Footer */
+footer { margin-top:15px; font-size:0.85rem; color:#ffe6e6; }
 
 /* ================= Responsive ================= */
-@media (max-width: 768px) {
-    h1.title {
-        font-size: 1.8rem;
-    }
-
-    .time-box {
-        min-width: 50px;
-        padding: 12px 10px;
-        font-size: 1.1rem;
-    }
-
-    #exam-btn {
-        width: 90%;
-        font-size: 1rem;
-        padding: 14px 0;
-    }
-
-    #roll-buttons button {
-        flex: 1 1 45%;
-        font-size: 0.95rem;
-        padding: 10px 8px;
-    }
+@media (max-width:480px) {
+    h1.title { font-size:1.5rem; }
+    .logo { width:40vw; }
+    .time-box { min-width:45px; padding:8px; font-size:1rem; }
+    #exam-btn { width:90%; font-size:1rem; padding:12px 0; }
+    #roll-buttons button { flex:1 1 45%; font-size:0.9rem; padding:10px 6px; }
+    .exam-box-text { font-size:0.9rem; }
+    .viva-countdown { gap:5px; flex-wrap:nowrap; }
 }
-
-@media (max-width: 480px) {
-    h1.title {
-        font-size: 1.5rem;
-    }
-
-    .time-box {
-        min-width: 45px;
-        padding: 10px 8px;
-        font-size: 1rem;
-    }
-
-    #exam-btn {
-        width: 95%;
-        font-size: 0.95rem;
-        padding: 12px 0;
-    }
-
-    #roll-buttons button {
-        flex: 1 1 40%;
-        font-size: 0.9rem;
-        padding: 10px 6px;
-    }
-
-    .routine-img {
-        max-width: 90%;
-        border-radius: 12px;
-    }
-}
-
