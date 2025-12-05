@@ -114,3 +114,27 @@ footer { margin-top:15px; font-size:0.85rem; color:#ffe6e6; }
     .exam-box-text { font-size:0.9rem; }
     .viva-countdown { gap:5px; flex-wrap:nowrap; }
 }
+#exam-dropdown {
+    display: none; /* hidden by default */
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.routine-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background:#ffffff; /* white box behind the image */
+    padding:5px;
+}
+
+/* Mobile responsive */
+@media (max-width:480px){
+    .routine-img {
+        max-width: 90%;
+        padding:5px;
+        border-radius:12px;
+    }
+}
+
