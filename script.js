@@ -35,7 +35,6 @@ function updateCountdown() {
 
     document.getElementById("status-text").innerHTML = `<strong>Next Exam: ${exam.name}</strong>`;
     document.getElementById("next-exam").innerText = `📅 ${start.toLocaleDateString('en-GB', { weekday:'long', day:'2-digit', month:'short', year:'numeric' })} | 🕙 ${start.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit', hour12:true })} - ${end.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit', hour12:true })}`;
-
   } else if (now >= start && now <= end) {
     document.getElementById("status-text").innerText = `${exam.name} is ongoing...`;
     document.getElementById("timer").style.display = "none";
@@ -124,15 +123,5 @@ function showVivaForRange(range) {
     }, 1000);
   });
 
-  // Exam Routine Button Toggle
-const examBtn = document.getElementById('exam-btn');
-const examDropdown = document.getElementById('exam-dropdown');
-
-examBtn.addEventListener('click', () => {
-  examDropdown.style.display = examDropdown.style.display === 'flex' ? 'none' : 'flex';
-});
-
-
   vivaDropdown.style.display = 'flex';
 }
-
