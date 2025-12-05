@@ -9,8 +9,8 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #FF3B3F; /* red background */
+    font-family: 'Poppins';
+    background: #ff0000 ; /* red background */
     color: #fff;
 }
 
@@ -226,3 +226,4 @@ footer {
         border-radius: 12px;
     }
 }
+
