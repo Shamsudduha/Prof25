@@ -20,6 +20,7 @@ p.quote { font-style:italic; color:#ffe6e6; margin:20px 0; }
 /* ================= Next Exam Box ================= */
 .next-exam-box {
     background:#ffffff;
+    font-weight:300;
     color:#7c0a02; /* deep red text inside white box */
     padding:15px 10px;
     border-radius:15px;
@@ -137,4 +138,5 @@ footer { margin-top:15px; font-size:0.85rem; color:#ffe6e6; }
         border-radius:12px;
     }
 }
+
 
